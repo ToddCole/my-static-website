@@ -2,29 +2,309 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - My Static Website</title>
+    <title>About Us - TechInsights</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to Our Website</h2>
-        <p>This website is designed to provide information about our services and offerings. We aim to deliver high-quality content and resources to our visitors.</p>
-        <h3>Our Mission</h3>
-        <p>Our mission is to create a platform that connects people with valuable information and resources. We strive to make our website user-friendly and informative.</p>
-        <h3>Our Team</h3>
-        <p>We have a dedicated team of professionals who are passionate about delivering the best experience for our users. Our team works tirelessly to ensure that the content is up-to-date and relevant.</p>
-    </main>
-    <footer>
-        &copy; 2025 My Static Website
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>TechInsights</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="nav-cta">Subscribe</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>About TechInsights</h1>
+                <p>Pioneering the future of technology journalism with expert analysis and cutting-edge insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <!-- Mission Section -->
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At TechInsights, we're dedicated to demystifying the rapidly evolving world of technology. Our mission is to provide clear, actionable insights that help professionals, enthusiasts, and innovators stay ahead of the curve in an increasingly digital world.</p>
+                    <p>We believe that technology should empower everyone, not just a select few. That's why we break down complex topics into digestible content that bridges the gap between technical complexity and practical understanding.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team collaboration">
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Monthly Readers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Articles Published</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Industry Awards</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">Countries Reached</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <div class="section-header">
+                    <h2>Meet Our Expert Team</h2>
+                    <p>Our diverse team of technology experts, journalists, and industry veterans brings you the most comprehensive tech coverage</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Alex Johnson">
+                        </div>
+                        <div class="team-content">
+                            <h3>Alex Johnson</h3>
+                            <p class="team-role">Editor-in-Chief & AI Specialist</p>
+                            <p>Former Google AI researcher with 10+ years in machine learning and enterprise AI solutions.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Sarah Chen">
+                        </div>
+                        <div class="team-content">
+                            <h3>Sarah Chen</h3>
+                            <p class="team-role">Senior Security Analyst</p>
+                            <p>Cybersecurity expert and former CISO with expertise in Zero Trust architectures and threat intelligence.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-medium"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Mike Rodriguez">
+                        </div>
+                        <div class="team-content">
+                            <h3>Mike Rodriguez</h3>
+                            <p class="team-role">Cloud Architecture Lead</p>
+                            <p>AWS Solutions Architect with deep expertise in serverless computing and cloud-native development.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Emma Taylor">
+                        </div>
+                        <div class="team-content">
+                            <h3>Emma Taylor</h3>
+                            <p class="team-role">DevOps Engineering Director</p>
+                            <p>Kubernetes expert and former Netflix engineer specializing in scalable infrastructure and CI/CD pipelines.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="David Kim">
+                        </div>
+                        <div class="team-content">
+                            <h3>David Kim</h3>
+                            <p class="team-role">Blockchain Technology Lead</p>
+                            <p>Web3 pioneer and smart contract developer with experience building DeFi protocols and NFT platforms.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Lisa Wang">
+                        </div>
+                        <div class="team-content">
+                            <h3>Lisa Wang</h3>
+                            <p class="team-role">Data Science Director</p>
+                            <p>PhD in Computer Science with expertise in big data analytics, machine learning, and business intelligence.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-kaggle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <div class="section-header">
+                    <h2>Our Values</h2>
+                    <p>The principles that guide our work and define our commitment to excellence</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Accuracy First</h3>
+                        <p>Every piece of content is thoroughly researched and fact-checked by our expert team to ensure reliability and trustworthiness.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation Focus</h3>
+                        <p>We spotlight emerging technologies and breakthrough innovations that will shape the future of our digital world.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Community Driven</h3>
+                        <p>Our content is shaped by our community's needs, questions, and feedback to ensure maximum value and relevance.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educational Impact</h3>
+                        <p>We believe in empowering our readers with knowledge that drives career growth and technological literacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Growing Community</h2>
+                <p>Stay ahead of the technology curve with exclusive insights, expert analysis, and early access to emerging trends</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Subscribe to Newsletter</a>
+                    <a href="contact.html" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>TechInsights</span>
+                    </div>
+                    <p>Exploring the future of technology through expert analysis and cutting-edge insights.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">DevOps</a></li>
+                        <li><a href="#">Web3 & Blockchain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get weekly updates on the latest tech trends</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechInsights. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
