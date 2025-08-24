@@ -2,38 +2,245 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - My Static Website</title>
+    <title>TechInsights - Leading Technology Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Static Website</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Home Page</h2>
-        <p>This is the home page of my static website. Here you can find various sections that provide information about the site.</p>
-        <section>
-            <h3>Latest Updates</h3>
-            <ul>
-                <li>Update 1: New features added to the website.</li>
-                <li>Update 2: Improved performance and loading times.</li>
-                <li>Update 3: Added new content to the About and Contact pages.</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>TechInsights</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="#" class="nav-cta">Subscribe</a></li>
             </ul>
-        </section>
-        <section>
-            <h3>Featured Content</h3>
-            <p>Check out our latest articles and resources to help you get started with web development.</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2024 My Static Website
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Exploring the Future of Technology</h1>
+            <p>Discover cutting-edge insights, expert analysis, and the latest trends shaping our digital world</p>
+            <div class="hero-buttons">
+                <a href="#featured" class="btn-primary">Read Latest Posts</a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Video
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Technology and Innovation">
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Articles</h2>
+                <p>Stay ahead with our most popular and trending content</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card featured">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI Revolution">
+                        <div class="blog-category">AI & Machine Learning</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>The AI Revolution: How Machine Learning is Transforming Industries</h3>
+                        <p>Explore how artificial intelligence and machine learning are reshaping businesses across every sector, from healthcare to finance...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Alex Johnson">
+                                <span>Alex Johnson</span>
+                            </div>
+                            <div class="date">March 15, 2024</div>
+                            <div class="read-time">8 min read</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cybersecurity">
+                        <div class="blog-category">Cybersecurity</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Zero Trust Architecture: The Future of Cybersecurity</h3>
+                        <p>Understanding the principles behind Zero Trust security models and how organizations can implement them effectively...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Sarah Chen">
+                                <span>Sarah Chen</span>
+                            </div>
+                            <div class="date">March 12, 2024</div>
+                            <div class="read-time">6 min read</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cloud Computing">
+                        <div class="blog-category">Cloud Computing</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Serverless Computing: Building Scalable Applications</h3>
+                        <p>Learn how serverless architecture is changing the way we build and deploy applications in the cloud...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Mike Rodriguez">
+                                <span>Mike Rodriguez</span>
+                            </div>
+                            <div class="date">March 10, 2024</div>
+                            <div class="read-time">7 min read</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="DevOps">
+                        <div class="blog-category">DevOps</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Kubernetes Best Practices for Production Deployments</h3>
+                        <p>Essential guidelines and strategies for successfully deploying and managing Kubernetes clusters in production...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Emma Taylor">
+                                <span>Emma Taylor</span>
+                            </div>
+                            <div class="date">March 8, 2024</div>
+                            <div class="read-time">10 min read</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Web3">
+                        <div class="blog-category">Web3 & Blockchain</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Decentralized Applications: Building the Future Web</h3>
+                        <p>A comprehensive guide to understanding and developing decentralized applications on blockchain platforms...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="David Kim">
+                                <span>David Kim</span>
+                            </div>
+                            <div class="date">March 5, 2024</div>
+                            <div class="read-time">9 min read</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Science">
+                        <div class="blog-category">Data Science</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Big Data Analytics: Turning Information into Insights</h3>
+                        <p>Discover how modern data analytics tools and techniques are helping businesses make data-driven decisions...</p>
+                        <div class="blog-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Lisa Wang">
+                                <span>Lisa Wang</span>
+                            </div>
+                            <div class="date">March 3, 2024</div>
+                            <div class="read-time">11 min read</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest tech insights delivered directly to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-note">No spam, unsubscribe at any time</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>TechInsights</span>
+                    </div>
+                    <p>Exploring the future of technology through expert analysis and cutting-edge insights.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">DevOps</a></li>
+                        <li><a href="#">Web3 & Blockchain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get weekly updates on the latest tech trends</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechInsights. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
