@@ -1,0 +1,15 @@
+{
+  "name": "my-static-website",
+  "version": "1.0.0",
+  "description": "A simple static website built with HTML, CSS, and JavaScript.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
