@@ -1,0 +1,201 @@
+[
+  {
+    "id": "breakfast-quinoa-bowl",
+    "title": "Anti-Inflammatory Quinoa Breakfast Bowl",
+    "category": "Breakfast",
+    "prepTime": "10 minutes",
+    "cookTime": "15 minutes",
+    "servings": 2,
+    "histamineLevel": "Low",
+    "tags": ["gluten-free", "dairy-free", "high-protein", "anti-inflammatory"],
+    "ingredients": [
+      "1 cup quinoa",
+      "2 cups fresh coconut milk",
+      "1 tbsp fresh ginger, grated",
+      "2 tbsp coconut oil",
+      "1 cup fresh blueberries",
+      "1/2 cup sliced fresh pear",
+      "2 tbsp pumpkin seeds",
+      "1 tsp vanilla extract",
+      "Pinch of sea salt"
+    ],
+    "instructions": [
+      "Rinse quinoa thoroughly and cook in coconut milk with ginger and salt for 15 minutes",
+      "Stir in vanilla and coconut oil",
+      "Top with fresh blueberries, pear slices, and pumpkin seeds",
+      "Serve warm or at room temperature"
+    ],
+    "nutrition": {
+      "calories": 420,
+      "protein": "12g",
+      "carbs": "65g",
+      "fat": "14g",
+      "fiber": "8g"
+    },
+    "notes": "Fresh ingredients only - avoid frozen berries which can be higher in histamines",
+    "author": "Dr. Sarah Nutrition",
+    "image": "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "dateAdded": "2024-08-28"
+  },
+  {
+    "id": "zucchini-herb-pasta",
+    "title": "Fresh Zucchini Pasta with Herbs",
+    "category": "Lunch",
+    "prepTime": "15 minutes",
+    "cookTime": "12 minutes",
+    "servings": 4,
+    "histamineLevel": "Low",
+    "tags": ["vegetarian", "dairy-free", "fresh-herbs", "light"],
+    "ingredients": [
+      "2 large zucchini, spiralized",
+      "3 tbsp olive oil",
+      "4 cloves fresh garlic, minced",
+      "1/2 cup fresh basil leaves",
+      "1/4 cup fresh parsley",
+      "2 tbsp fresh oregano",
+      "1/2 cup pine nuts",
+      "Salt and pepper to taste",
+      "1 lemon, juiced"
+    ],
+    "instructions": [
+      "Heat olive oil in large pan over medium heat",
+      "Add garlic and cook for 1 minute until fragrant",
+      "Add zucchini noodles and cook for 2-3 minutes until just tender",
+      "Remove from heat and add fresh herbs, pine nuts, and lemon juice",
+      "Season with salt and pepper",
+      "Serve immediately while warm"
+    ],
+    "nutrition": {
+      "calories": 245,
+      "protein": "8g",
+      "carbs": "12g",
+      "fat": "20g",
+      "fiber": "4g"
+    },
+    "notes": "Use fresh herbs only - dried herbs can trigger histamine reactions",
+    "author": "Chef Maria",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "dateAdded": "2024-08-27"
+  },
+  {
+    "id": "coconut-chicken-curry",
+    "title": "Mild Coconut Chicken Curry",
+    "category": "Dinner",
+    "prepTime": "20 minutes",
+    "cookTime": "25 minutes",
+    "servings": 6,
+    "histamineLevel": "Low",
+    "tags": ["dairy-free", "anti-inflammatory", "protein-rich", "comfort-food"],
+    "ingredients": [
+      "2 lbs fresh chicken breast, cubed",
+      "1 can full-fat coconut milk",
+      "2 tbsp coconut oil",
+      "1 onion, diced",
+      "4 cloves fresh garlic, minced",
+      "2 tbsp fresh ginger, grated",
+      "1 tsp turmeric powder",
+      "1 tsp ground cumin",
+      "2 cups fresh broccoli florets",
+      "1 cup carrots, sliced",
+      "Fresh cilantro for garnish",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Heat coconut oil in large pot over medium-high heat",
+      "Add onion, garlic, and ginger. Cook until fragrant, about 3 minutes",
+      "Add chicken and cook until lightly browned",
+      "Add turmeric and cumin, stir for 1 minute",
+      "Pour in coconut milk and bring to gentle simmer",
+      "Add vegetables and simmer for 15 minutes until chicken is cooked through",
+      "Garnish with fresh cilantro and serve with rice"
+    ],
+    "nutrition": {
+      "calories": 385,
+      "protein": "32g",
+      "carbs": "14g",
+      "fat": "24g",
+      "fiber": "4g"
+    },
+    "notes": "Fresh chicken only - avoid pre-marinated or processed chicken",
+    "author": "Chef Anna",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "dateAdded": "2024-08-26"
+  },
+  {
+    "id": "apple-rice-crackers",
+    "title": "Fresh Apple & Rice Crackers",
+    "category": "Snacks",
+    "prepTime": "5 minutes",
+    "cookTime": "0 minutes",
+    "servings": 2,
+    "histamineLevel": "Low",
+    "tags": ["quick", "portable", "fresh-fruit", "gluten-free"],
+    "ingredients": [
+      "2 fresh green apples, sliced",
+      "12 plain rice crackers",
+      "4 tbsp sunflower seed butter",
+      "1 tsp coconut oil",
+      "Pinch of sea salt"
+    ],
+    "instructions": [
+      "Slice apples into thin wedges",
+      "Mix sunflower seed butter with coconut oil until smooth",
+      "Spread mixture on rice crackers",
+      "Top with fresh apple slices",
+      "Sprinkle with sea salt if desired"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": "6g",
+      "carbs": "35g",
+      "fat": "14g",
+      "fiber": "6g"
+    },
+    "notes": "Use fresh apples only - avoid stored apples which may be higher in histamines",
+    "author": "Nutritionist Emma",
+    "image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "dateAdded": "2024-08-25"
+  },
+  {
+    "id": "sweet-potato-soup",
+    "title": "Roasted Sweet Potato & Ginger Soup",
+    "category": "Dinner",
+    "prepTime": "15 minutes",
+    "cookTime": "45 minutes",
+    "servings": 4,
+    "histamineLevel": "Low",
+    "tags": ["vegan", "anti-inflammatory", "comfort-food", "meal-prep"],
+    "ingredients": [
+      "4 large sweet potatoes, peeled and cubed",
+      "3 tbsp coconut oil",
+      "1 large onion, diced",
+      "3 tbsp fresh ginger, grated",
+      "4 cups vegetable broth (low-sodium)",
+      "1 can coconut milk",
+      "2 tsp turmeric",
+      "Salt and pepper to taste",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "Preheat oven to 425°F. Toss sweet potatoes with 2 tbsp coconut oil",
+      "Roast sweet potatoes for 25-30 minutes until tender",
+      "In large pot, heat remaining coconut oil over medium heat",
+      "Add onion and ginger, cook until softened",
+      "Add roasted sweet potatoes, broth, and turmeric",
+      "Simmer for 10 minutes, then blend until smooth",
+      "Stir in coconut milk, season with salt and pepper",
+      "Garnish with fresh cilantro"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": "6g",
+      "carbs": "52g",
+      "fat": "12g",
+      "fiber": "8g"
+    },
+    "notes": "Perfect for meal prep - stores well in refrigerator for up to 4 days",
+    "author": "Wellness Coach Lisa",
+    "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "dateAdded": "2024-08-24"
+  }
+]

@@ -1,7 +1,10 @@
-// TechInsights Blog - Interactive Elements
+// Anti Histamine Diet - Interactive Elements
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Welcome to TechInsights - Exploring the Future of Technology!');
+    console.log('Welcome to The Anti Histamine Diet - Your Guide to Low-Histamine Living!');
+    
+    // Initialize Meal Database
+    initializeMealDatabase();
 
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = this.querySelector('input[type="email"]').value;
             
             if (validateEmail(email)) {
-                showNotification('Thank you for subscribing! Welcome to TechInsights.', 'success');
+                showNotification('Thank you for subscribing! Welcome to The Anti Histamine Diet.', 'success');
                 this.querySelector('input[type="email"]').value = '';
             } else {
                 showNotification('Please enter a valid email address.', 'error');
@@ -304,7 +307,7 @@ function initScrollAnimations() {
 if ('requestIdleCallback' in window) {
     requestIdleCallback(() => {
         // Lazy load non-critical features
-        console.log('TechInsights: Non-critical features loaded');
+        console.log('Anti Histamine Diet: Non-critical features loaded');
     });
 }
 
@@ -317,3 +320,290 @@ if ('serviceWorker' in navigator) {
         //     .catch(registrationError => console.log('SW registration failed'));
     });
 }
+
+// Meal Database Functionality
+let mealsData = [];
+
+async function initializeMealDatabase() {
+    try {
+        // Determine the correct path based on current page location
+        const path = window.location.pathname.includes('/pages/') ? '../data/meals.json' : 'data/meals.json';
+        const response = await fetch(path);
+        mealsData = await response.json();
+        console.log(`Loaded ${mealsData.length} meals from database`);
+        
+        // Check if we're on a meals page and display them
+        const mealsContainer = document.getElementById('meals-container');
+        if (mealsContainer) {
+            displayMeals(mealsData);
+            initializeMealFilters();
+        }
+    } catch (error) {
+        console.error('Error loading meals database:', error);
+        showNotification('Unable to load meal database. Please refresh the page.', 'error');
+    }
+}
+
+function displayMeals(meals, containerId = 'meals-container') {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = meals.map(meal => createMealCard(meal)).join('');
+    
+    // Add click handlers to meal cards
+    container.querySelectorAll('.meal-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const mealId = this.dataset.mealId;
+            const meal = mealsData.find(m => m.id === mealId);
+            if (meal) {
+                showMealDetails(meal);
+            }
+        });
+    });
+}
+
+function createMealCard(meal) {
+    return `
+        <article class="meal-card" data-meal-id="${meal.id}" data-category="${meal.category.toLowerCase()}" data-histamine="${meal.histamineLevel.toLowerCase()}">
+            <div class="meal-image">
+                <img src="${meal.image}" alt="${meal.title}" loading="lazy">
+                <div class="meal-category">${meal.category}</div>
+                <div class="meal-histamine-level ${meal.histamineLevel.toLowerCase()}">${meal.histamineLevel} Histamine</div>
+            </div>
+            <div class="meal-content">
+                <h3>${meal.title}</h3>
+                <p class="meal-description">${meal.instructions[0].substring(0, 100)}...</p>
+                <div class="meal-meta">
+                    <div class="meal-time">
+                        <i class="fas fa-clock"></i>
+                        <span>${parseInt(meal.prepTime) + parseInt(meal.cookTime)} min total</span>
+                    </div>
+                    <div class="meal-servings">
+                        <i class="fas fa-users"></i>
+                        <span>Serves ${meal.servings}</span>
+                    </div>
+                    <div class="meal-calories">
+                        <i class="fas fa-fire"></i>
+                        <span>${meal.nutrition.calories} cal</span>
+                    </div>
+                </div>
+                <div class="meal-tags">
+                    ${meal.tags.slice(0, 3).map(tag => `<span class="meal-tag">${tag}</span>`).join('')}
+                </div>
+                <div class="meal-author">
+                    <span>By ${meal.author}</span>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+function showMealDetails(meal) {
+    const modal = createMealModal(meal);
+    document.body.appendChild(modal);
+    
+    // Animate in
+    setTimeout(() => {
+        modal.style.opacity = '1';
+        modal.querySelector('.meal-modal-content').style.transform = 'translateY(0)';
+    }, 10);
+    
+    // Close handlers
+    modal.querySelector('.meal-modal-close').addEventListener('click', closeMealModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeMealModal();
+    });
+}
+
+function createMealModal(meal) {
+    const modal = document.createElement('div');
+    modal.className = 'meal-modal';
+    modal.innerHTML = `
+        <div class="meal-modal-content">
+            <div class="meal-modal-header">
+                <h2>${meal.title}</h2>
+                <button class="meal-modal-close">&times;</button>
+            </div>
+            <div class="meal-modal-body">
+                <div class="meal-modal-image">
+                    <img src="${meal.image}" alt="${meal.title}">
+                    <div class="meal-modal-badges">
+                        <span class="badge category-badge">${meal.category}</span>
+                        <span class="badge histamine-badge ${meal.histamineLevel.toLowerCase()}">${meal.histamineLevel} Histamine</span>
+                    </div>
+                </div>
+                <div class="meal-modal-info">
+                    <div class="meal-quick-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Total Time</strong>
+                                <span>${parseInt(meal.prepTime) + parseInt(meal.cookTime)} minutes</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Servings</strong>
+                                <span>${meal.servings}</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <strong>Calories</strong>
+                                <span>${meal.nutrition.calories}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meal-ingredients">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            ${meal.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="meal-instructions">
+                        <h3>Instructions</h3>
+                        <ol>
+                            ${meal.instructions.map((step, index) => `<li><span class="step-number">${index + 1}</span>${step}</li>`).join('')}
+                        </ol>
+                    </div>
+                    
+                    <div class="meal-nutrition">
+                        <h3>Nutrition Facts</h3>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-item">
+                                <strong>${meal.nutrition.calories}</strong>
+                                <span>Calories</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <strong>${meal.nutrition.protein}</strong>
+                                <span>Protein</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <strong>${meal.nutrition.carbs}</strong>
+                                <span>Carbs</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <strong>${meal.nutrition.fat}</strong>
+                                <span>Fat</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <strong>${meal.nutrition.fiber}</strong>
+                                <span>Fiber</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ${meal.notes ? `
+                        <div class="meal-notes">
+                            <h3>Notes</h3>
+                            <p>${meal.notes}</p>
+                        </div>
+                    ` : ''}
+                    
+                    <div class="meal-tags-full">
+                        ${meal.tags.map(tag => `<span class="meal-tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add modal styles
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
+    
+    return modal;
+}
+
+function closeMealModal() {
+    const modal = document.querySelector('.meal-modal');
+    if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.remove();
+        }, 300);
+    }
+}
+
+function initializeMealFilters() {
+    const categoryFilter = document.getElementById('category-filter');
+    const histamineFilter = document.getElementById('histamine-filter');
+    const searchInput = document.getElementById('meal-search');
+    
+    if (categoryFilter) {
+        categoryFilter.addEventListener('change', filterMeals);
+    }
+    
+    if (histamineFilter) {
+        histamineFilter.addEventListener('change', filterMeals);
+    }
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', debounce(filterMeals, 300));
+    }
+}
+
+function filterMeals() {
+    const categoryFilter = document.getElementById('category-filter');
+    const histamineFilter = document.getElementById('histamine-filter');
+    const searchInput = document.getElementById('meal-search');
+    
+    const categoryValue = categoryFilter?.value || 'all';
+    const histamineValue = histamineFilter?.value || 'all';
+    const searchValue = searchInput?.value.toLowerCase() || '';
+    
+    let filteredMeals = mealsData.filter(meal => {
+        const matchesCategory = categoryValue === 'all' || meal.category.toLowerCase() === categoryValue;
+        const matchesHistamine = histamineValue === 'all' || meal.histamineLevel.toLowerCase() === histamineValue;
+        const matchesSearch = searchValue === '' || 
+            meal.title.toLowerCase().includes(searchValue) ||
+            meal.ingredients.some(ing => ing.toLowerCase().includes(searchValue)) ||
+            meal.tags.some(tag => tag.toLowerCase().includes(searchValue));
+        
+        return matchesCategory && matchesHistamine && matchesSearch;
+    });
+    
+    displayMeals(filteredMeals);
+    
+    // Update results count
+    const resultsCount = document.getElementById('results-count');
+    if (resultsCount) {
+        resultsCount.textContent = `${filteredMeals.length} recipe${filteredMeals.length !== 1 ? 's' : ''} found`;
+    }
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Export functions for global access if needed
+window.mealDatabase = {
+    displayMeals,
+    filterMeals,
+    showMealDetails,
+    getMeals: () => mealsData
+};

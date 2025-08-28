@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Low-Histamine Recipes | The Anti Histamine Diet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover delicious low-histamine recipes for breakfast, lunch, dinner, and snacks. All recipes are designed for histamine intolerance.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>The Anti Histamine Diet</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="meals.html" class="active">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="nav-cta">Free Guide</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Low-Histamine Recipe Collection</h1>
+            <p>Discover delicious, nutritious recipes specifically designed for histamine intolerance</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="meal-search" placeholder="Search recipes, ingredients, or tags...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="histamine-filter">Histamine Level:</label>
+                    <select id="histamine-filter">
+                        <option value="all">All Levels</option>
+                        <option value="low">Low Histamine</option>
+                        <option value="moderate">Moderate</option>
+                    </select>
+                </div>
+                
+                <div class="results-info">
+                    <span id="results-count">Loading recipes...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meals Grid -->
+    <section class="meals-section">
+        <div class="container">
+            <div id="meals-container" class="meals-grid">
+                <!-- Meals will be loaded here by JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading delicious recipes...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Weekly Recipe Updates</h2>
+                <p>New low-histamine recipes and nutrition tips delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email for weekly recipes" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-note">Free recipes + nutrition tips. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>The Anti Histamine Diet</span>
+                    </div>
+                    <p>Empowering you to live well with histamine intolerance through delicious, nourishing food and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Recipe Categories</h3>
+                    <ul>
+                        <li><a href="meals.html?category=breakfast">Breakfast Recipes</a></li>
+                        <li><a href="meals.html?category=lunch">Lunch Recipes</a></li>
+                        <li><a href="meals.html?category=dinner">Dinner Recipes</a></li>
+                        <li><a href="meals.html?category=snacks">Snacks & Treats</a></li>
+                        <li><a href="#">Shopping Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Weekly Recipes</h3>
+                    <p>Get new low-histamine recipes and nutrition tips</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Anti Histamine Diet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
