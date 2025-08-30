@@ -1,4 +1,4 @@
-# My Static Website
+# Histamine Handbook
 
 This is a simple static website project that demonstrates the use of HTML, CSS, and JavaScript to create a multi-page website. The project includes a home page, an about page, and a contact page, along with styles and scripts to enhance the user experience.
 
